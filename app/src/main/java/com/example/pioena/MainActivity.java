@@ -1,11 +1,14 @@
 package com.example.pioena;
 
-import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -17,18 +20,36 @@ public class MainActivity extends AppCompatActivity {
     Fragment5 fragment5;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = findViewById(R.id.custom_toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowCustomEnabled(true); // customizing
+        actionBar.setDisplayShowTitleEnabled(true); // 제목 보이게
+        actionBar.setDisplayHomeAsUpEnabled(false); // 뒤로가기 버튼(true이면 생김)
+        ImageButton imageButton = findViewById(R.id.search);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(getApplicationContext(), "test", Toast.LENGTH_LONG).show();
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                SearchFragment searchFragment = new SearchFragment();
+                transaction.replace(R.id.container, searchFragment);
+                transaction.commit();
+            }
+        });
+
         fragment1 = new Fragment1();
         fragment2 = new Fragment2();
         fragment3 = new Fragment3();
         fragment4 = new Fragment4();
         fragment5 = new Fragment5();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit(); // 처음에는 홈 화면
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setOnNavigationItemSelectedListener(
                 item -> {
