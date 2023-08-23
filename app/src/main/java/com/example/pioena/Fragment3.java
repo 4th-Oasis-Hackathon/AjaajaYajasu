@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-public class Fragment3 extends Fragment {
+public class Fragment3 extends Fragment { // 커뮤니티
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment3, container, false);
