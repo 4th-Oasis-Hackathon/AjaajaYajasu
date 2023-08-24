@@ -6,28 +6,28 @@
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@android:drawable/ic_dialog_email"
-        android:title="Tip" />
+        android:title="홈" />
 
     <item
         android:id="@+id/tab2"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@android:drawable/ic_dialog_email"
-        android:title="업체" />
+        android:title="클래스" />
 
     <item
         android:id="@+id/tab3"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@android:drawable/ic_dialog_email"
-        android:title="홈" />
+        android:title="커뮤니티" />
 
     <item
         android:id="@+id/tab4"
         app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@android:drawable/ic_dialog_email"
-        android:title="찜목록" />
+        android:title="나만의 꽃조합" />
 
     <item
         android:id="@+id/tab5"
