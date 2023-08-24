@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Pioena</string>
+    <string name="log_in">Log in</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="or">"----SNS 계정으로 로그인----"</string>
+    <string name="big_logo">"피어나"</string>
+    <string name="small_logo">"일상을 꽃으로 채우다"</string>
+
+    <string name="facebook_app_id">526498191468722</string>
+    <string name="fb_login_protocol_scheme">fb526498191468722</string>
 </resources>
