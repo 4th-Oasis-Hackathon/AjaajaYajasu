@@ -32,40 +32,41 @@
 
     <!--하단 sns 버튼 3개-->
 
-    <Button
+    <ImageButton
         android:id="@+id/roundButton1"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginStart="88dp"
-        android:background="@drawable/insta_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="624dp"
+        android:src="@drawable/apple_button"
+        android:background="#00ffffff"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.855" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/roundButton2"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginStart="20dp"
-        android:background="@drawable/facebook_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="624dp"
+        android:src="@drawable/google_button"
+        android:background="#00ffffff"
         app:layout_constraintStart_toEndOf="@+id/roundButton1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.855" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <!--아이디 로그인-->
+
+    <ImageButton
         android:id="@+id/roundButton3"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginStart="20dp"
-        android:background="@drawable/google_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="624dp"
+        android:src="@drawable/facebook_button"
+        android:background="#00ffffff"
         app:layout_constraintStart_toEndOf="@+id/roundButton2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.855" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--아이디 로그인-->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
