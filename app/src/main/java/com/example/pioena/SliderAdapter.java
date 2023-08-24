@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.bumptech.glide.Glide;
 import com.example.pioena.databinding.SlideItemBinding;
@@ -18,10 +19,12 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderView
     private static final String TAG = "SliderAdapter";
 
     private Context mContext;
-    private List<String> sliderItems;
+    private List<Integer> sliderItems;
+    private ViewPager2 mViewPager2;
 
-    public SliderAdapter(Context context, List<String> sliderImage) {
+    public SliderAdapter(Context context, ViewPager2 vpImageSlider, List<Integer> sliderImage) {
         mContext = context;
+        mViewPager2 = vpImageSlider;
         this.sliderItems = sliderImage;
     }
 
@@ -36,6 +39,9 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderView
     @Override
     public void onBindViewHolder(@NonNull SliderViewHolder holder, int position) {
         holder.bind(sliderItems.get(position));
+        if (position == sliderItems.size() - 2) {
+            mViewPager2.post(runnable);
+        }
     }
 
     @Override
@@ -50,7 +56,7 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderView
             mBinding = binding;
         }
 
-        void bind(String sliderItem) {
+        void bind(Integer sliderItem) {
             try {
                 Glide.with(mContext).load(sliderItem).into(mBinding.imageSlider);
             } catch (Exception e) {
@@ -58,4 +64,11 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderView
             }
         }
     }
+    private Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            sliderItems.addAll(sliderItems);
+            notifyDataSetChanged();
+        }
+    };
 }
