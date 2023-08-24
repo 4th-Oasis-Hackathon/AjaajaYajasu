@@ -14,8 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 public class Fragment2 extends Fragment {
 
     GridView gridView;
@@ -32,7 +30,7 @@ public class Fragment2 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_class, container, false);
+        View rootView = inflater.inflate(R.layout.fragment2, container, false);
 
         gridView = rootView.findViewById(R.id.gridView);
 
@@ -50,8 +48,8 @@ public class Fragment2 extends Fragment {
         return rootView;
     }
 
-    //원데이 클래스 스피너 구현
-    //@Override
+    //원데이 클래스 스피너 구현 // 에러 있음
+    /*
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -86,4 +84,5 @@ public class Fragment2 extends Fragment {
         levelAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         levelSpinner.setAdapter(levelAdapter);
     }
+     */
 }
