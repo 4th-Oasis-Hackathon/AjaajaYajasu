@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,7 +51,13 @@ public class LoginFragment extends Fragment {
         final String[] id = new String[1];
         final String[] pw = new String[1];
 
-        //((MainActivity)getActivity()).onWindowFocusChanged(true);
+        ImageButton imageButton = rootView.findViewById(R.id.roundButton1);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "애플 로그인", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         Button LoginButton = rootView.findViewById(R.id.btnLogin);
         LoginButton.setOnClickListener(new View.OnClickListener() {
@@ -63,8 +70,12 @@ public class LoginFragment extends Fragment {
                 } else if (pw[0].length() == 0) {
                     Toast.makeText(getContext(), "PW를 다시 입력해주세요", Toast.LENGTH_LONG).show();
                 } else {
+                    Toast.makeText(getContext(), "로그인 되었습니다", Toast.LENGTH_SHORT).show();
                     if (listener != null) {
                         listener.onTabSelected(0);  // fragment1으로(홈) 전환
+                    }
+                    else {
+                        Toast.makeText(getContext(), "에러", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

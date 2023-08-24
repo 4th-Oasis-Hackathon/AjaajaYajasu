@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnTabItemSelectedListener {
     LoginFragment loginFragment;
     Fragment1 fragment1;
     Fragment2 fragment2;
@@ -89,5 +89,4 @@ public class MainActivity extends AppCompatActivity {
             bottomNavigation.setSelectedItemId(R.id.tab5);
         }
     }
-
 }
