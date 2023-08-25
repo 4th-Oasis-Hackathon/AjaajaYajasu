@@ -22,7 +22,10 @@
         android:drawable="@drawable/ic_insta"
         android:gravity="center" />
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     <size
         android:width="100dp"
         android:height="100dp" />

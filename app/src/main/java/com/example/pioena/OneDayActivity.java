@@ -5,23 +5,32 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+<<<<<<< Updated upstream:app/src/main/java/com/example/pioena/OneDayActivity.java
 import com.google.android.material.navigation.NavigationView;
+=======
+import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+>>>>>>> Stashed changes:app/src/main/java/com/example/pioena/Fragment2.java
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 public class OneDayActivity extends AppCompatActivity {
 
-    GridView gridView;
+    ListView gridView;
 
     String[] numberWord = {"One", "Two", "Three", "Four", "Five", "Six"};
 
     int[] numberImage = {R.drawable.f1, R.drawable.f2, R.drawable.f3,
-            R.drawable.f4, R.drawable.f5, R.drawable.f6};
+            R.drawable.f1, R.drawable.f2, R.drawable.f3};
 
     /**원데이 클래스 그리드 레이아웃 구현
      *  사진 클릭시 toast 발생
