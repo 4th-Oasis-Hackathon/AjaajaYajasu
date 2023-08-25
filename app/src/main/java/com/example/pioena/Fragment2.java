@@ -31,7 +31,7 @@ public class Fragment2 extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment2, container, false);
-
+        /*
         gridView = rootView.findViewById(R.id.gridView);
 
         NumberAdapter numberAdapter = new NumberAdapter(requireContext(), numberWord, numberImage);
@@ -44,7 +44,7 @@ public class Fragment2 extends Fragment {
                         , Toast.LENGTH_SHORT).show();
             }
         });
-
+           */
         return rootView;
     }
 
