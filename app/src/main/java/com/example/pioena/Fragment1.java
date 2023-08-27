@@ -6,15 +6,18 @@ import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.pioena.databinding.ActivityMainBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,13 +31,17 @@ public class Fragment1 extends Fragment { // 홈
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment1, container, false);
+
+        initUI(rootView);
+
+        return rootView;
+    }
+    private void initUI(ViewGroup rootView) {
         sliderItems.add(R.drawable.rotate_flower1);
         sliderItems.add(R.drawable.rotate_flower2);
         sliderItems.add(R.drawable.rotate_flower3);
         vpImageSlider = rootView.findViewById(R.id.vp_image_slider);
         sliderAdapter = new SliderAdapter(requireContext(), vpImageSlider, sliderItems);
         vpImageSlider.setAdapter(sliderAdapter);
-
-        return rootView;
     }
 }

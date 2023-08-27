@@ -25,14 +25,14 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*  // 현재 상단바 제거
+        /*  // 현재 상단바 제거(관련 기능도 제거)
         Toolbar toolbar = findViewById(R.id.custom_toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowCustomEnabled(true); // customizing
         actionBar.setDisplayShowTitleEnabled(true); // 제목 보이게
         actionBar.setDisplayHomeAsUpEnabled(false); // 뒤로가기 버튼(true이면 생김)
-        */
+        
         ImageButton imageButton = findViewById(R.id.search);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements OnTabItemSelected
                 transaction.commit();
             }
         });
+         */
 
         loginFragment = new LoginFragment();
         fragment1 = new Fragment1();

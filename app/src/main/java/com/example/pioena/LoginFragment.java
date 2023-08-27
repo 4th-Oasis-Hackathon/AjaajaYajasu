@@ -13,6 +13,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class LoginFragment extends Fragment {
     Context context;
     com.example.pioena.OnTabItemSelectedListener listener;
@@ -44,6 +46,10 @@ public class LoginFragment extends Fragment {
     }
 
     private void initUI(ViewGroup rootView) {
+        // 하단바를 숨기는 코드  // not working well
+        BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setVisibility(View.GONE);
+
         EditText editText1, editText2;
         editText1 = rootView.findViewById(R.id.etEmail);
         editText2 = rootView.findViewById(R.id.etPassword);
