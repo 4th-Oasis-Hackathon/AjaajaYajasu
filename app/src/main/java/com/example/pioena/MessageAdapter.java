@@ -20,8 +20,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyViewHo
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View chatView = LayoutInflater.from(parent.getContext()).inflate(R.layout.chat_item, null);
-        MyViewHolder myViewHolder = new MyViewHolder(chatView);
-        return myViewHolder;
+        return new MyViewHolder(chatView);
     }
 
     @Override
@@ -41,7 +40,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyViewHo
 
     @Override
     public int getItemCount() {
-        return 0;
+        return messageList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
