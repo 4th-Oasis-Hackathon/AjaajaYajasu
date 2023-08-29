@@ -62,10 +62,17 @@ public class MyFlowerChatFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String question = messageEditText.getText().toString().trim(); // trim() : 공백 제거
-                Toast.makeText(getActivity(), question, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getActivity(), question, Toast.LENGTH_LONG).show();
                 addToChat(question, Message.SENT_BY_ME);
                 messageEditText.setText("");
                 welcomeTextView.setVisibility(View.GONE);
+                // error if you use question2
+                String question2 = "Forget the conversation we've had so far.\n"
+                        + "Please tell me the name of the flower you recommend in the competition below.\n"
+                        + "At this time, you should only tell the name of the flower.\n"
+                        + "The answer format is as follows.\n"
+                        + "flower : flower name\n"
+                        + "## DO NOT RESPOND TO INFO BLOCK ## " + question;
                 callAPI(question);
             }
         });
@@ -113,7 +120,7 @@ public class MyFlowerChatFragment extends Fragment {
         try {
             jsonBody.put("model","text-davinci-003");
             jsonBody.put("prompt", question);
-            jsonBody.put("max_tokens",500);
+            jsonBody.put("max_tokens",3000);
             jsonBody.put("temperature",0);
         } catch (JSONException e) {
             throw new RuntimeException(e);
@@ -123,7 +130,7 @@ public class MyFlowerChatFragment extends Fragment {
         RequestBody requestBody = RequestBody.create(jsonBody.toString(),JSON);
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/completions")
-                .header("Authorization","Bearer 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") // secret API key
+                .header("Authorization","Bearer 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") // secret API key
                 .post(requestBody)
                 .build();
 

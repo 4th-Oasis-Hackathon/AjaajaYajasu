@@ -46,7 +46,7 @@ public class LoginFragment extends Fragment {
     }
 
     private void initUI(ViewGroup rootView) {
-        // 하단바를 숨기는 코드  // not working well
+        // 하단바를 숨기는 코드
         BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.bottom_navigation);
         bottomNavigationView.setVisibility(View.GONE);
 
