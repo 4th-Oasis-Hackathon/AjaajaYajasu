@@ -1,0 +1,23 @@
+
+
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js"
+        integrity="sha384-70k0rrouSYPWJt7q9rSTKpiTfX6USlMYjZUtr1Du+9o4cGvhPAWxngdtVZDdErlh" crossorigin="anonymous"></script>
+<script>
+  Kakao.init('55352f8ecfe3780d75439c584482a025');
+</script>
+
+<a id="kakaotalk-sharing-btn" href="javascript:;">
+  <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+       alt="카카오톡 공유 보내기 버튼" />
+</a>
+
+<script>
+  Kakao.Share.createCustomButton({
+    container: '#kakaotalk-sharing-btn',
+    templateId: 97832,
+    templateArgs: {
+      title: '제목 영역입니다.',
+      description: '설명 영역입니다.',
+    },
+  });
+</script>

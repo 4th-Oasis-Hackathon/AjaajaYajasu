@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>상품 상세 정보</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico"/>
+    <!-- Bootstrap icons-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#!">
+            <svg width="100" height="39" viewBox="0 0 158 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_0_1)">
+                    <path d="M2.09721 32.2241C3.25574 32.2241 4.19442 31.2812 4.19442 30.1176V14.9606C4.19442 13.797 3.25574 12.8542 2.09721 12.8542C0.938676 12.8542 0 11.9114 0 10.7477V9.70784C0 8.54577 0.938676 7.60139 2.09721 7.60139H31.1338C32.2923 7.60139 33.231 8.5442 33.231 9.70784V10.7477C33.231 11.9114 32.2923 12.8542 31.1338 12.8542C29.9753 12.8542 29.0366 13.797 29.0366 14.9606V30.1176C29.0366 31.2812 29.9753 32.2241 31.1338 32.2241C32.2923 32.2241 33.231 33.1669 33.231 34.3305V35.3704C33.231 36.534 32.2923 37.4769 31.1338 37.4769H2.09721C0.938676 37.4769 0 36.534 0 35.3704V34.3305C0 33.1669 0.938676 32.2241 2.09721 32.2241ZM23.5885 30.1176V14.9606C23.5885 13.797 22.6498 12.8542 21.4913 12.8542H11.7397C10.5812 12.8542 9.64248 13.797 9.64248 14.9606V30.1176C9.64248 31.2812 10.5812 32.2241 11.7397 32.2241H21.4913C22.6498 32.2241 23.5885 31.2812 23.5885 30.1176ZM40.0138 7H41.2674C42.426 7 43.3646 7.94281 43.3646 9.10644V35.9186C43.3646 37.0822 42.426 38.025 41.2674 38.025H40.0138C38.8553 38.025 37.9166 37.0822 37.9166 35.9186V9.10644C37.9166 7.94281 38.8553 7 40.0138 7Z"
+                          fill="black"/>
+                    <path d="M65.8087 7.10963C70.8202 7.10963 74.6341 8.25917 77.4127 10.1745V10.1197H86.0479C86.9055 10.1197 87.601 9.42123 87.601 8.55986C87.601 7.69849 88.2964 7 89.154 7H91.496C92.3536 7 93.049 7.69849 93.049 8.55986V36.4651C93.049 37.3265 92.3536 38.025 91.496 38.025H89.154C88.2964 38.025 87.601 37.3265 87.601 36.4651V16.876C87.601 16.0146 86.9055 15.3161 86.0479 15.3161H84.1035C83.0573 15.3161 82.3104 16.3341 82.6222 17.338C83.115 18.9276 83.352 20.6253 83.352 22.3747C83.352 30.5279 78.1768 37.5865 65.8103 37.5865C53.4437 37.5865 48.2686 30.5279 48.2686 22.3747C48.2686 14.2214 53.333 7.10963 65.8087 7.10963ZM77.9023 22.3762C77.9023 16.248 75.0146 12.3624 65.8087 12.3624C56.6028 12.3624 53.7151 16.248 53.7151 22.3762C53.7151 28.5045 56.5482 32.3353 65.8087 32.3353C75.0692 32.3353 77.9023 28.5045 77.9023 22.3762Z"
+                          fill="black"/>
+                    <path d="M101.059 7.60139H103.607C104.394 7.60139 105.034 8.24351 105.034 9.0344V30.7613C105.034 31.5694 105.685 32.2241 106.49 32.2241H129.333C130.053 32.2241 130.638 32.8114 130.638 33.5349V35.9264C130.638 36.7831 129.947 37.4769 129.094 37.4769H101.416C100.406 37.4769 99.5854 36.6531 99.5854 35.6382V9.08138C99.5854 8.26387 100.245 7.60139 101.059 7.60139ZM135.84 7H139.735C140.036 7 140.279 7.24432 140.279 7.54658C140.279 7.84884 140.522 8.09316 140.823 8.09316H145.008C145.556 8.09316 145.998 8.53794 145.998 9.08765V12.1353C145.998 12.7727 145.484 13.2911 144.848 13.2911H140.823C140.522 13.2911 140.279 13.5355 140.279 13.8377V36.7909C140.279 37.4722 139.729 38.025 139.05 38.025H136.131C135.413 38.025 134.831 37.4408 134.831 36.7188V8.01172C134.831 7.45261 135.282 7 135.838 7H135.84Z"
+                          fill="black"/>
+                </g>
+                <path d="M139.004 14.502C139.004 14.502 138.542 6.35935 147.356 4.54611C156.169 2.73027 154.672 3.01644 154.672 3.01644C154.672 3.01644 155.609 17.7071 139.004 14.5046V14.502Z"
+                      fill="white" stroke="black" stroke-width="5" stroke-miterlimit="10"/>
+                <defs>
+                    <clipPath id="clip0_0_1">
+                        <rect width="146" height="31.025" fill="white" transform="translate(0 7)"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="/main">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/add">About</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">All Products</a></li>
+                        <li>
+                            <hr class="dropdown-divider"/>
+                        </li>
+                        <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                        <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <form class="d-flex" style="margin-inline-start: 680px;">
+                <button class="btn btn-outline-dark text-sm-end" type="submit">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <!--span class="badge bg-dark text-white ms-1 rounded-pill">0</span-->
+                </button>
+            </form>
+
+            <div class="text-sm-end" style="margin-inline-start: 20px;">
+                <i class="box-arrow-up-right me-1"></i>
+                <a class="btn btn-outline-dark mt-auto" th:href="@{'/chat'}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-chat-right-dots" viewBox="0 0 16 16">
+                        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
+                        <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                    </svg>
+                    챗봇 상담</a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1 class="display-5">상품 정보</h1>
+    </div>
+</div>
+<div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+    <div class="row" style="display: flex; align-items: center; ">
+        <div class="col-md-6">
+            <!-- 이미지를 화면 왼쪽에 배치 -->
+            <div class="product-image">
+
+                <img th:src="@{'https://source.unsplash.com/random/1500x800/?' + ${purchase.recommendName}}"
+                     alt="Product Image" class="img-fluid">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- 상품 정보를 화면 오른쪽에 배치 -->
+            <div class="product-info">
+                <h3 th:text="${purchase.recommendName}"></h3>
+                <p th:text="${purchase.recommendContent}"></p>
+                <p><b>상품 코드 : </b><span class="badge badge-danger"
+                                        th:text="${purchase.recommendId}"></span></p>
+                <p><b>제조사</b> : <!--span th:text="${product.manufacturer}"--> <span> 전북 전주시 ~</span></p>
+                <p><b>재고 수</b> : <!--span th:text="${product.unitsInStock}"--> <span> 1000 </span></p>
+                <h4><!--span th:text="${product.unitPrice}"></span-->10000원</h4>
+                <p><a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    상품 주문
+                    &raquo;</a>
+                    <a href="/main" class="btn btn-secondary">주문취소 &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="text-align: center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">결제창</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <a href="ko.qr-code-generator.com/" border="0" style="cursor:default" rel="nofollow">
+                    <img src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fwww.naver.com%2F&chs=180x180&choe=UTF-8&chld=L|2">
+                </a>
+                <p><br>
+                    <b>결제를 완료하였으면 '닫기' 버튼을 눌러주십시오.</b>
+                </p>
+            </div>
+            <div class="modal-footer">
+
+
+                <button type="button" class="btn btn-secondary" th:onclick="|location.href='@{/main}'|">닫기</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">결제취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+</footer>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/js/scripts.js}"></script>
+</body>
+</html>

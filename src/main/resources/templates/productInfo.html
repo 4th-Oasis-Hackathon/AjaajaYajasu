@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link href="../css/bootstrap.min.css"
+          th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 560px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="py-5 text-center">
+        <h2>상품 상세</h2>
+    </div>
+
+    <div>
+        <label for="productId">상품 ID</label>
+        <input type="text" id="productId" name="productId" class="form-control"
+               value="1" th:value="${product.productId}" readonly>
+    </div>
+    <div>
+        <label for="productName">상품명</label>
+        <input type="text" id="productName" name="productName" class="form-control"
+               value="상품A" th:value="${product.productName}" readonly>
+    </div>
+    <div>
+        <label for="price">상품정보</label>
+        <input type="text" id="price" name="price" class="form-control"
+               value="10000" th:value="${product.productInfo}" readonly>
+    </div>
+
+    <hr class="my-4">
+    <div class="row">
+        <div class="col">
+            <button class="w-100 btn btn-primary btn-lg"
+                    onclick="location.href='editForm.html'"
+                    th:onclick="|location.href='@{/basic/items/{itemId}/edit(itemId=${product.productId})}'|" type="button">상품 수정
+            </button>
+        </div>
+        <div class="col">
+            <button class="w-100 btn btn-secondary btn-lg"
+                    onclick="location.href='main.html'"
+                    th:onclick="|location.href='@{/main}'|"
+                    type="button">목록으로
+            </button>
+        </div>
+
+        <div class="col">
+            <button class="w-100 btn btn-secondary btn-lg"
+                    onclick="location.href='items.html'"
+                    th:onclick="|location.href='@{/basic/items/{itemId}/delete(itemId=${product.productId})}'|"
+                    type="button">삭제
+            </button>
+        </div>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>
