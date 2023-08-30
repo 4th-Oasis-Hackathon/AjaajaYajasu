@@ -38,13 +38,33 @@ public class Fragment1 extends Fragment { // 홈
         BottomNavigationView bottomNavigationView = getActivity().findViewById(R.id.bottom_navigation);
         bottomNavigationView.setVisibility(View.VISIBLE);
 
-        ImageView imageView = rootView.findViewById(R.id.go_ai_img);
+        ImageView imageView = rootView.findViewById(R.id.go_ai_button);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment4 fragment4 = new Fragment4();
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.container, fragment4);
+                transaction.commit();
+            }
+        });
+        ImageView search_btn1 = rootView.findViewById(R.id.imageView7);
+        ImageView search_btn2 = rootView.findViewById(R.id.imageView11);
+        search_btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SearchFragment searchFragment = new SearchFragment();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, searchFragment);
+                transaction.commit();
+            }
+        });
+        search_btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SearchFragment searchFragment = new SearchFragment();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, searchFragment);
                 transaction.commit();
             }
         });

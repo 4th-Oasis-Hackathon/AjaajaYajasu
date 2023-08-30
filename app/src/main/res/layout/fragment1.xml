@@ -5,26 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="305dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/home_background1">
+
                         <ImageView
                             android:id="@+id/imageView6"
                             android:layout_width="wrap_content"
@@ -33,6 +41,7 @@
                             android:layout_marginStart="48dp"
                             android:layout_marginTop="38dp"
                             android:src="@drawable/pieona" />
+                        <!--search-->
                         <ImageView
                             android:id="@+id/imageView7"
                             android:layout_width="wrap_content"
@@ -41,6 +50,7 @@
                             android:layout_marginStart="320dp"
                             android:layout_marginTop="38dp"
                             android:src="@drawable/white_search" />
+                        <!--shop-->
                         <ImageView
                             android:id="@+id/imageView8"
                             android:layout_width="wrap_content"
@@ -56,8 +66,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="48dp"
                             android:layout_marginTop="250dp"
-                            android:src="@drawable/visual"
-                            android:background="#00ffffff"/>
+                            android:background="#00ffffff"
+                            android:src="@drawable/visual" />
 
                         <ImageView
                             android:id="@+id/imageView9"
@@ -67,55 +77,59 @@
                             android:layout_marginStart="48dp"
                             android:layout_marginTop="300dp"
                             android:src="@drawable/home_txt1" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/home_background2">
+
+                            <ImageView
+                                android:id="@+id/imageView10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="48dp"
+                                android:layout_marginTop="38dp"
+                                android:src="@drawable/pieona" />
+                            <!--search-->
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="320dp"
+                                android:layout_marginTop="38dp"
+                                android:src="@drawable/white_search" />
+                            <!--shop-->
+                            <ImageView
+                                android:id="@+id/imageView12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="360dp"
+                                android:layout_marginTop="38dp"
+                                android:src="@drawable/white_shop" />
+
+                            <ImageButton
+                                android:id="@+id/visualButton7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="48dp"
+                                android:layout_marginTop="250dp"
+                                android:background="#00ffffff"
+                                android:src="@drawable/visual" />
+
+                            <ImageView
+                                android:id="@+id/imageView13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="48dp"
+                                android:layout_marginTop="300dp"
+                                android:src="@drawable/home_txt2" />
+                        </RelativeLayout>
                     </RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/home_background2">
-                        <ImageView
-                            android:id="@+id/imageView10"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_marginStart="48dp"
-                            android:layout_marginTop="38dp"
-                            android:src="@drawable/pieona" />
-                        <ImageView
-                            android:id="@+id/imageView11"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_marginStart="320dp"
-                            android:layout_marginTop="38dp"
-                            android:src="@drawable/white_search" />
-                        <ImageView
-                            android:id="@+id/imageView12"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_marginStart="360dp"
-                            android:layout_marginTop="38dp"
-                            android:src="@drawable/white_shop" />
-
-                        <ImageButton
-                            android:id="@+id/visualButton7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="48dp"
-                            android:layout_marginTop="250dp"
-                            android:src="@drawable/visual"
-                            android:background="#00ffffff"/>
-
-                        <ImageView
-                            android:id="@+id/imageView13"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentStart="true"
-                            android:layout_marginStart="48dp"
-                            android:layout_marginTop="300dp"
-                            android:src="@drawable/home_txt2" />
-                    </RelativeLayout>
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -128,18 +142,22 @@
                 android:layout_marginLeft="44dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/text1" />
+
             <ImageView
-                android:id="@+id/go_ai_img"
+                android:id="@+id/go_ai_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="100dp"
+                android:layout_marginStart="40dp"
                 android:layout_marginTop="30dp"
-                android:src="@drawable/frag4circle" />
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/go_ai_button" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/text2"
                     android:layout_width="wrap_content"
@@ -148,58 +166,67 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="44dp"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/text2"></ImageView>
+                    android:src="@drawable/text2">
+                </ImageView>
 
                 <ImageButton
                     android:id="@+id/modubogi"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="84dp"
-                    android:background="#00ffffff"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/modubogi"></ImageButton>
+                    android:background="#00ffffff"
+                    android:src="@drawable/modubogi">
+                </ImageButton>
             </LinearLayout>
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
                 app:layout_constraintTop_toTopOf="parent">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     <ImageView
                         android:id="@+id/oneday_class1"
-                        android:src="@drawable/onedayclass1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp" />
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/onedayclass1" />
+
                     <ImageView
                         android:id="@+id/oneday_class2"
-                        android:src="@drawable/onedayclass2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp" />
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/onedayclass2" />
+
                     <ImageView
                         android:id="@+id/oneday_class3"
-                        android:src="@drawable/onedayclass3"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp" />
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/onedayclass3" />
                 </LinearLayout>
             </HorizontalScrollView>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/text3"
                     android:layout_width="wrap_content"
@@ -208,8 +235,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="44dp"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/text3">
-                </ImageView>
+                    android:src="@drawable/text3"></ImageView>
 
                 <ImageButton
                     android:id="@+id/modubogi2"
@@ -218,45 +244,50 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginTop="10dp"
                     android:background="#00ffffff"
-                    android:src="@drawable/modubogi">
-                </ImageButton>
+                    android:src="@drawable/modubogi"></ImageButton>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <ImageView
                     android:id="@+id/farmhouse_story1"
-                    android:src="@drawable/farm_house_story1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="0dp" />
+                    android:layout_marginTop="0dp"
+                    android:src="@drawable/farm_house_story1" />
+
                 <ImageView
                     android:id="@+id/farmhouse_story2"
-                    android:src="@drawable/farm_house_story2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="0dp" />
+                    android:layout_marginTop="0dp"
+                    android:src="@drawable/farm_house_story2" />
+
                 <ImageView
                     android:id="@+id/farmhouse_story3"
-                    android:src="@drawable/farm_house_story3"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="0dp" />
+                    android:layout_marginTop="0dp"
+                    android:src="@drawable/farm_house_story3" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/text4"
                     android:layout_width="wrap_content"
@@ -266,50 +297,56 @@
                     android:layout_marginLeft="44dp"
                     android:layout_marginTop="10dp"
                     android:src="@drawable/text4"></ImageView>
+
                 <ImageButton
                     android:id="@+id/modubogi3"
                     android:layout_width="60dp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="84dp"
-                    android:background="#00ffffff"
                     android:layout_marginTop="10dp"
+                    android:background="#00ffffff"
                     android:src="@drawable/modubogi"></ImageButton>
             </LinearLayout>
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
                 app:layout_constraintTop_toTopOf="parent">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
+
                     <ImageView
                         android:id="@+id/tip1"
-                        android:src="@drawable/tip1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp" />
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/tip1" />
+
                     <ImageView
                         android:id="@+id/tip2"
-                        android:src="@drawable/tip2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp" />
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/tip2" />
+
                     <ImageView
                         android:id="@+id/tip3"
-                        android:src="@drawable/tip3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp" />
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/tip3" />
                 </LinearLayout>
             </HorizontalScrollView>
         </LinearLayout>
