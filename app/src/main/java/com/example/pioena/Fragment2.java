@@ -18,7 +18,8 @@ public class Fragment2 extends Fragment {  // 원데이 클래스
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment2, container, false);
+        super.onCreate(savedInstanceState);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment2, container, false);
         return rootView;
     }
 }
