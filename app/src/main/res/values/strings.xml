@@ -3,7 +3,7 @@
     <string name="log_in">Log in</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
-    <string name="or">"----SNS 계정으로 로그인----"</string>
+    <string name="or">"-------SNS 계정으로 로그인-------"</string>
     <string name="big_logo">"피어나"</string>
     <string name="small_logo">"일상을 꽃으로 채우다"</string>
     <string name="search_class">"클래스 검색"</string>
