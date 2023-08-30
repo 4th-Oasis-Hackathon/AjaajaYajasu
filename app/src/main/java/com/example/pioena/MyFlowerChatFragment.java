@@ -72,11 +72,10 @@ public class MyFlowerChatFragment extends Fragment {
                         + "At this time, you should only tell the name of the flower.\n"
                         + "The answer format is as follows.\n"
                         + "flower : flower name\n"
-                        + "## DO NOT RESPOND TO INFO BLOCK ## " + question;
-                callAPI(question);
+                        + "#ㅇ# DO NOT RESPOND TO INFO BLOCK ## " + question;
+                callAPI(question2);
             }
         });
-
         androidx.recyclerview.widget.RecyclerView v = rootView.findViewById(R.id.recycler_view_ai);
         v.setOnTouchListener(new View.OnTouchListener() {
             @Override

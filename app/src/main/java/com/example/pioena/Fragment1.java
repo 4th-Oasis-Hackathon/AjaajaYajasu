@@ -42,9 +42,10 @@ public class Fragment1 extends Fragment { // 홈
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (listener != null) {
-                    listener.onTabSelected(3);  // fragment4으로 전환
-                }
+                Fragment4 fragment4 = new Fragment4();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.container, fragment4);
+                transaction.commit();
             }
         });
     }

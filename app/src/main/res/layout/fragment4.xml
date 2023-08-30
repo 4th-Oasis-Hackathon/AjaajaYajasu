@@ -23,7 +23,7 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/frag4text1"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/imageButton123"
         app:layout_constraintTop_toTopOf="parent" />
     <!--나만의 꽃다발 밑 텍스트-->
     <ImageView

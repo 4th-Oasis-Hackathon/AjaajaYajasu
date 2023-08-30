@@ -7,11 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/drawer_layout">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <!--뒤로 가기-->
-
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="wrap_content"
@@ -23,7 +23,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <!--원데이 클래스-->
-
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
@@ -34,6 +33,27 @@
             app:layout_constraintStart_toEndOf="@+id/imageButton"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="276dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/search"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="312dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/shop"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/etEmail"
@@ -64,6 +84,8 @@
             app:layout_constraintStart_toEndOf="@+id/etEmail"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/drawer_btn" />
+
+
 
 
         <!--최근 검색어-->
@@ -138,7 +160,8 @@
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:background="#00ffffff"
-                    android:src="@drawable/peo1"></ImageButton>
+                    android:src="@drawable/peo1">
+                </ImageButton>
 
                 <ImageButton
                     android:id="@+id/people2"
