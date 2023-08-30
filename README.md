@@ -22,6 +22,7 @@ REST API 통신 라이브러리인 Retrofit2를 사용하여 프론트엔드와 
 
 ## 스플래시 화면
 
+![image](https://github.com/4th-Oasis-Hackathon/AjaajaYajasu/assets/70792311/a3fdbd2d-77e3-47ab-9202-d83f2505419c) <br>
 구현 방식 및 특징
  - 스플래시 화면을 앱 실행 시 가장 먼저 보이도록 Manifest 파일 수정
  - 스플래시 액티비티가 메모리에 만들어진 후, 몇 초 뒤 로그인 화면으로 전환되도록 handler 이용
